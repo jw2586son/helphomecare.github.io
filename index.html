@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>도와줘홈케어 | 보일러 배관청소 · 에어컨 청소/수리</title>
+<meta name="description" content="난방 배관 세척과 보일러 분배기 청소, 에어컨 분해청소·수리. 작업 전후 사진을 보여드리고, 견적 후 작업합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#12263A;--sub:#53657A;--heat:#D8472B;--heat2:#FBE9E4;--cool:#1B7FA6;--cool2:#E3F2F8;--paper:#F6F9FA;--line:#D6E0E6;--sun:#FFC83D}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{font-family:"IBM Plex Sans KR",system-ui,sans-serif;color:var(--ink);line-height:1.7;padding-bottom:62px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cool);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.3;letter-spacing:-.02em}
+
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{font-weight:700;font-size:20px;text-decoration:none}
+.logo i{font-style:normal;color:var(--heat)}.logo b{color:var(--cool)}
+header nav{display:flex;gap:4px;overflow-x:auto}
+header nav a{padding:8px 12px;font-size:14px;text-decoration:none;color:var(--sub);white-space:nowrap}
+header nav a:hover{color:var(--ink)}
+.tel{background:var(--ink);color:#fff;text-decoration:none;font-weight:600;padding:9px 16px;border-radius:6px;white-space:nowrap;font-size:15px}
+@media(max-width:760px){header nav{display:none}}
+
+.hero{display:grid;grid-template-columns:1fr 1fr}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.pane{padding:48px 28px 40px;color:#fff;display:flex;flex-direction:column;gap:14px;min-height:420px}
+.pane.h{background:var(--heat)}.pane.c{background:var(--cool)}
+.pane h1{font-size:clamp(28px,4.2vw,40px);font-weight:700}
+.pane p{opacity:.92;max-width:22em}
+.pane svg{margin-top:auto;width:100%;max-width:300px}
+.pane a.go{align-self:flex-start;background:#fff;color:var(--ink);padding:10px 18px;border-radius:6px;text-decoration:none;font-weight:600;font-size:15px}
+.lead{padding:22px 20px;background:var(--ink);color:#fff;text-align:center;font-size:17px}
+.lead b{color:var(--sun)}
+
+section{padding:60px 0}
+section.alt{background:var(--paper)}
+h2{font-size:clamp(24px,4vw,32px);font-weight:700;margin-bottom:6px}
+.sub{color:var(--sub);margin-bottom:28px}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.box{border:1px solid var(--line);border-top:6px solid var(--cool);padding:22px;background:#fff}
+.box.h{border-top-color:var(--heat)}
+.box h3{font-size:22px;margin-bottom:10px}
+.box ul{padding-left:18px;color:var(--sub)}
+.box li{margin:4px 0}
+.box li strong{color:var(--ink);font-weight:600}
+
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:620px}
+.ba figure{background:#fff;border:1px solid var(--line);padding:16px;text-align:center}
+.ba svg{width:100%;max-width:150px}
+.ba figcaption{font-weight:600;margin-top:6px}
+.ba figcaption span{display:block;font-weight:400;font-size:13px;color:var(--sub)}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:26px}
+.pic{aspect-ratio:4/3;background:repeating-linear-gradient(45deg,#E4ECF0,#E4ECF0 10px,#EDF3F6 10px,#EDF3F6 20px);background-size:cover;background-position:center;display:grid;place-items:end start;padding:10px;font-size:12px;color:#7A8A99;border:1px solid var(--line)}
+.pic[style*="url"]{color:transparent}
+
+.steps{list-style:none;padding:0;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.steps li{counter-increment:s;background:#fff;border:1px solid var(--line);padding:16px}
+.steps li::before{content:counter(s);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-weight:600;font-size:14px;margin-bottom:6px}
+.steps b{display:block}.steps span{font-size:14px;color:var(--sub)}
+
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}
+th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line)}
+th{background:var(--cool2)}
+td:last-child{font-weight:600;white-space:nowrap}
+.note{font-size:13px;color:var(--sub);margin-top:10px}
+
+details{border-bottom:1px solid var(--line);padding:15px 0}
+summary{cursor:pointer;font-weight:600;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--cool);font-size:22px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin-top:8px;color:var(--sub)}
+
+.contact{background:var(--ink);color:#fff;text-align:center}
+.contact .big{display:inline-block;margin:14px 0;color:var(--sun);text-decoration:none;font-size:clamp(34px,8vw,56px);font-weight:700;letter-spacing:-.01em}
+.contact p{color:#BAC6D3}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:6px}
+.btns a{padding:12px 24px;border-radius:6px;font-weight:600;text-decoration:none;background:var(--sun);color:var(--ink)}
+.btns a.o{background:transparent;color:#fff;border:1px solid #566A80}
+.info{margin-top:26px;font-size:13px;color:#8DA0B3}
+
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--sun);z-index:10;text-align:center}
+.bar a{display:block;padding:15px;font-weight:700;font-size:18px;text-decoration:none}
+@media(min-width:760px){.bar{display:none}body{padding-bottom:0}}
+
+.blog .head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px;margin-bottom:22px}
+.more{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:6px}
+.more:hover{background:var(--cool)}
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.post{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:transform .15s,box-shadow .15s}
+.post:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(18,38,58,.12)}
+.post .pic{aspect-ratio:16/10;border:0;border-bottom:1px solid var(--line)}
+.post div.t{padding:14px 16px 18px}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px;margin-bottom:6px;background:var(--cool2);color:var(--cool)}
+.tag.h{background:var(--heat2);color:var(--heat)}
+.post h3{font-size:17px;margin-bottom:4px}
+.post span.m{font-size:13px;color:var(--sub)}
+.cta{margin-top:26px;background:var(--ink);color:#fff;border-radius:8px;padding:26px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.cta b{font-size:19px;display:block}
+.cta span{font-size:14px;color:#BAC6D3}
+.cta a{background:var(--sun);color:var(--ink);text-decoration:none;font-weight:700;padding:13px 24px;border-radius:6px}
+.lead a{color:var(--sun);font-weight:600}
+.bar{display:flex}
+.bar a{flex:1}
+.bar a.b2{background:var(--ink);color:#fff}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">도와줘<b>홈케어</b></a>
+    <nav>
+      <a href="#service">서비스</a><a href="#before">작업 전후</a><a href="#process">진행 순서</a><a href="#blog">작업 후기</a><a href="#faq">질문</a>
+    </nav>
+    <a class="tel" href="tel:01000000000">전화 상담</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="pane h">
+      <h1>난방이 약하면<br>배관부터 씻어냅니다</h1>
+      <p>보일러 배관과 분배기에 쌓인 녹물·슬러지를 순환 세척으로 제거합니다.</p>
+      <a class="go" href="#service">보일러 배관청소 보기</a>
+      <svg viewBox="0 0 300 130" aria-hidden="true">
+        <path d="M10 100 H110 V35 H210 V100 H290" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="24" stroke-linejoin="round"/>
+        <path d="M10 100 H110 V35 H210 V100 H290" fill="none" stroke="#fff" stroke-width="8" stroke-linejoin="round" stroke-dasharray="2 14" stroke-linecap="round"/>
+        <rect x="132" y="8" width="56" height="18" rx="4" fill="#fff"/>
+      </svg>
+    </div>
+    <div class="pane c">
+      <h1>냄새 나고 안 시원한<br>에어컨, 분해해서 해결</h1>
+      <p>벽걸이·스탠드·시스템 에어컨 청소와 가스 충전, 실외기 수리까지.</p>
+      <a class="go" href="#service">에어컨 서비스 보기</a>
+      <svg viewBox="0 0 300 130" aria-hidden="true">
+        <rect x="30" y="10" width="240" height="62" rx="14" fill="#fff"/>
+        <rect x="52" y="52" width="196" height="8" rx="4" fill="#1B7FA6" opacity=".4"/>
+        <path d="M70 90 q10 -10 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+        <path d="M70 112 q10 -10 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".4"/>
+      </svg>
+    </div>
+  </div>
+  <p class="lead">전화 한 통이면 <b>당일 방문 가능 여부</b>를 바로 알려드립니다. 견적에 동의하신 뒤에만 작업합니다. 실제 작업 모습은 <a href="#blog">작업 후기 블로그</a>에서 확인하세요.</p>
+
+  <section id="service">
+    <div class="wrap">
+      <h2>서비스</h2>
+      <p class="sub">두 가지를 한 업체에서 맡아 방문이 한 번으로 끝납니다.</p>
+      <div class="two">
+        <div class="box h">
+          <h3>보일러 배관청소</h3>
+          <ul>
+            <li><strong>난방 배관 세척</strong> — 바닥 난방 코일 녹물·슬러지 제거</li>
+            <li><strong>분배기 청소</strong> — 밸브 막힘, 온수 불균형 점검</li>
+            <li><strong>보일러 순환 세척</strong> — 열교환기 쪽 이물질 제거</li>
+            <li><strong>상가·건물 난방 배관</strong> — 규모에 맞춰 별도 견적</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>에어컨 청소·수리</h3>
+          <ul>
+            <li><strong>분해 청소</strong> — 벽걸이 / 스탠드 / 시스템 에어컨</li>
+            <li><strong>가스 충전</strong> — 누설 점검 후 충전</li>
+            <li><strong>실외기 수리</strong> — 팬모터, 콘덴서, 기판</li>
+            <li><strong>설치·이전</strong> — 신규 설치, 철거, 이전 설치</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="before" class="alt">
+    <div class="wrap">
+      <h2>배관 속은 이렇게 달라집니다</h2>
+      <p class="sub">아래 그림은 이해를 돕는 단면도입니다. 실제 작업 사진으로 바꿔서 쓰세요.</p>
+      <div class="ba">
+        <figure>
+          <svg viewBox="0 0 100 100" role="img" aria-label="청소 전 배관 단면">
+            <circle cx="50" cy="50" r="46" fill="#5A6772"/><circle cx="50" cy="50" r="38" fill="#A8552B"/><circle cx="50" cy="50" r="9" fill="#E3F2F8"/>
+          </svg>
+          <figcaption>청소 전<span>녹과 슬러지로 물길이 좁아짐</span></figcaption>
+        </figure>
+        <figure>
+          <svg viewBox="0 0 100 100" role="img" aria-label="청소 후 배관 단면">
+            <circle cx="50" cy="50" r="46" fill="#5A6772"/><circle cx="50" cy="50" r="38" fill="#E3F2F8"/><circle cx="50" cy="50" r="28" fill="#BFE0EE"/>
+          </svg>
+          <figcaption>청소 후<span>물길이 넓어져 온수가 고르게 순환</span></figcaption>
+        </figure>
+      </div>
+      <div class="gallery">
+        <div class="pic" style="">작업 사진 1</div>
+        <div class="pic" style="">작업 사진 2</div>
+        <div class="pic" style="">작업 사진 3</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <h2>진행 순서</h2>
+      <p class="sub">수리비가 정해지기 전에는 작업하지 않습니다.</p>
+      <ol class="steps">
+        <li><b>전화·문자</b><span>증상과 주소를 알려주세요.</span></li>
+        <li><b>방문 점검</b><span>원인을 확인하고 사진을 보여드립니다.</span></li>
+        <li><b>견적 안내</b><span>작업 내용과 금액을 설명합니다.</span></li>
+        <li><b>작업</b><span>동의하시면 바로 진행합니다.</span></li>
+        <li><b>확인·A/S</b><span>작업 후 상태를 같이 확인합니다.</span></li>
+      </ol>
+    </div>
+  </section>
+
+
+  <section id="blog" class="blog alt">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>실제 작업 후기</h2>
+          <p class="sub" style="margin:0">작업 전후 사진과 과정을 블로그에 올립니다. 비슷한 증상을 먼저 찾아보세요.</p>
+        </div>
+        <a class="more" data-blog href="#" target="_blank" rel="noopener">블로그 전체 보기</a>
+      </div>
+      <div class="posts">
+        <a class="post" data-blog href="#" target="_blank" rel="noopener">
+          <div class="pic" style="">후기 사진</div>
+          <div class="t"><span class="tag h">보일러</span><h3>난방 배관청소 전후, 이런 물이 나왔습니다</h3><span class="m">작업 사진 보기</span></div>
+        </a>
+        <a class="post" data-blog href="#" target="_blank" rel="noopener">
+          <div class="pic" style="">후기 사진</div>
+          <div class="t"><span class="tag">에어컨</span><h3>냄새 나던 벽걸이 에어컨 분해청소</h3><span class="m">작업 사진 보기</span></div>
+        </a>
+        <a class="post" data-blog href="#" target="_blank" rel="noopener">
+          <div class="pic" style="">후기 사진</div>
+          <div class="t"><span class="tag h">보일러</span><h3>분배기 청소 후 방마다 온도가 고르게</h3><span class="m">작업 사진 보기</span></div>
+        </a>
+      </div>
+      <div class="cta">
+        <div><b>우리 집도 같은 증상일까요?</b><span>사진 한 장 보내주시면 먼저 확인해 드립니다.</span></div>
+        <a href="sms:01000000000">사진 문자로 보내기</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>자주 묻는 질문</h2>
+      <p class="sub">&nbsp;</p>
+      <details><summary>보일러 배관청소는 얼마나 걸리나요?</summary><p>집 크기와 배관 상태에 따라 다릅니다. 방문 점검 후 예상 시간을 안내드립니다. (실제 소요 시간으로 수정하세요.)</p></details>
+      <details><summary>배관청소를 꼭 해야 하나요?</summary><p>난방이 고르지 않거나 물이 탁하게 나오거나 보일러를 오래 쓰셨다면 점검해 볼 만합니다. 필요 없는 경우에는 솔직하게 말씀드립니다.</p></details>
+      <details><summary>에어컨 냄새는 청소로 없어지나요?</summary><p>곰팡이와 오염물이 원인이면 분해 청소로 대부분 해결됩니다. 가스나 부품 문제인 경우는 점검 후 안내드립니다.</p></details>
+      <details><summary>A/S는 어떻게 되나요?</summary><p>작업 후 (00)개월 이내 같은 증상이 재발하면 점검해 드립니다. (실제 조건으로 수정하세요.)</p></details>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>예약·견적 문의</h2>
+      <p>전화가 가장 빠릅니다. 증상과 사진을 문자로 보내주셔도 됩니다.</p>
+      <a class="big" href="tel:01000000000">010-0000-0000</a>
+      <div class="btns"><a href="tel:01000000000">전화하기</a><a class="o" href="sms:01000000000">문자 보내기</a><a class="o" data-blog href="#" target="_blank" rel="noopener">작업 후기 보기</a></div>
+      <p class="info">도와줘홈케어 | 대표 홍길동 | 사업자등록번호 000-00-00000 | 서비스 지역: (지역명 입력) | 09:00–20:00 연중무휴</p>
+    </div>
+  </section>
+</main>
+
+<div class="bar"><a href="tel:01000000000">전화하기</a><a class="b2" data-blog href="#" target="_blank" rel="noopener">작업 후기</a></div>
+<script>
+/* 블로그 주소는 아래 한 줄만 바꾸면 모든 버튼에 적용됩니다 */
+var BLOG_URL = "https://blog.naver.com/내블로그아이디";
+document.querySelectorAll("a[data-blog]").forEach(function(a){a.href = BLOG_URL;});
+</script>
+</body>
+</html>
