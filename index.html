@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OO에어컨 | 에어컨 수리·청소·설치·이전</title>
+<meta name="description" content="에어컨 냉방 불량, 물샘, 소음, 가스충전 수리. 당일 방문, 출장비 안내, 작업 후 A/S 보증.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0F2E36; --ink2:#46636B; --frost:#F3FAFB; --ice:#D9EEF2; --cyan:#0E9BB0;
+  --sun:#FFC83D; --line:#C7DEE3; --white:#FFFFFF;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans KR",system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.7;padding-bottom:72px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);background:var(--white);position:sticky;top:0;z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.logo{font-weight:900;font-size:19px;text-decoration:none}
+.logo span{color:var(--cyan)}
+nav a{margin-left:18px;font-size:14px;text-decoration:none;color:var(--ink2)}
+nav a:hover{color:var(--ink)}
+@media(max-width:620px){nav{display:none}}
+
+.hero{background:var(--ink);color:var(--white);padding:64px 0 56px}
+.hero p.lead{color:#B9D5DB;font-size:17px;max-width:30em}
+.hero h1{font-size:clamp(30px,6vw,52px);font-weight:900;line-height:1.25;letter-spacing:-.02em;margin-bottom:16px}
+.temp{display:inline-flex;align-items:baseline;gap:6px;margin:0 0 22px;color:var(--sun);font-weight:700}
+.temp b{font-size:15px}
+.callbox{margin-top:30px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.call{display:inline-block;background:var(--sun);color:var(--ink);font-weight:900;font-size:clamp(24px,5vw,34px);padding:14px 26px;border-radius:6px;text-decoration:none;letter-spacing:.01em}
+.call:hover{background:#FFD566}
+.callbox small{color:#B9D5DB;font-size:14px}
+
+section{padding:60px 0}
+section.alt{background:var(--frost)}
+h2{font-size:clamp(22px,4vw,30px);font-weight:900;letter-spacing:-.01em;margin-bottom:8px}
+.sub{color:var(--ink2);margin-bottom:28px}
+
+.symptoms{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;list-style:none;padding:0}
+.symptoms li{background:var(--white);border:1px solid var(--line);border-left:5px solid var(--cyan);padding:14px 16px;border-radius:4px;font-weight:500}
+.symptoms li span{display:block;font-weight:400;font-size:14px;color:var(--ink2)}
+
+table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--line)}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);font-size:16px}
+th{background:var(--ice);font-weight:700}
+td:last-child{font-weight:700;white-space:nowrap}
+.scroll{overflow-x:auto}
+.note{font-size:14px;color:var(--ink2);margin-top:12px}
+
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;counter-reset:s}
+.steps li{counter-increment:s;padding:18px;background:var(--white);border:1px solid var(--line);border-radius:4px}
+.steps li::before{content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--cyan);color:#fff;font-weight:700;margin-bottom:8px}
+.steps b{display:block}
+.steps span{font-size:14px;color:var(--ink2)}
+
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:700;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--cyan);font-size:22px;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin-top:10px;color:var(--ink2)}
+
+.contact{background:var(--ink);color:var(--white)}
+.contact h2{color:var(--white)}
+.contact dl{display:grid;grid-template-columns:110px 1fr;gap:10px 16px;margin-top:20px}
+.contact dt{color:#B9D5DB}
+.contact dd a{color:var(--sun);font-weight:700}
+footer{padding:22px 0;font-size:13px;color:var(--ink2);text-align:center}
+
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--sun);z-index:10;text-align:center}
+.bar a{display:block;padding:16px;font-weight:900;font-size:18px;text-decoration:none;color:var(--ink)}
+@media(min-width:760px){.bar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">OO<span>에어컨</span></a>
+    <nav>
+      <a href="#symptoms">증상</a>
+      <a href="#price">요금</a>
+      <a href="#process">진행 순서</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a href="#contact">연락처</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <p class="temp"><b>에어컨 수리·청소·설치·이전</b></p>
+      <h1>에어컨이 안 시원하면<br>오늘 방문해서 고칩니다</h1>
+      <p class="lead">원인을 먼저 확인하고, 수리비를 알려드린 뒤에 작업합니다. 동의 없이 진행하지 않습니다.</p>
+      <div class="callbox">
+        <a class="call" href="tel:01000000000">010-0000-0000</a>
+        <small>전화 한 통이면 방문 시간 안내까지 바로 도와드립니다.<br>영업시간 09:00–20:00 (연중무휴)</small>
+      </div>
+    </div>
+  </div>
+
+  <section id="symptoms">
+    <div class="wrap">
+      <h2>이런 증상이 있나요?</h2>
+      <p class="sub">하나라도 해당하면 점검이 필요합니다.</p>
+      <ul class="symptoms">
+        <li>바람은 나오는데 시원하지 않아요<span>가스 부족, 실외기 이상 가능성</span></li>
+        <li>실내기에서 물이 떨어져요<span>배수 호스 막힘, 필터 오염</span></li>
+        <li>켜면 이상한 소리가 나요<span>팬 마모, 부품 이탈</span></li>
+        <li>켜면 냄새가 나요<span>곰팡이, 열교환기 오염 → 분해 청소</span></li>
+        <li>실외기가 작동하지 않아요<span>콘덴서, 기판, 컴프레서 점검</span></li>
+        <li>에러 코드가 떠요<span>모델명과 코드를 알려주시면 사전 안내</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="price" class="alt">
+    <div class="wrap">
+      <h2>작업별 요금 안내</h2>
+      <p class="sub">현장 점검 후 최종 금액을 먼저 말씀드립니다.</p>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>작업</th><th>내용</th><th>요금</th></tr></thead>
+          <tbody>
+            <tr><td>출장 점검</td><td>증상 확인과 견적 안내</td><td>0,000원</td></tr>
+            <tr><td>가스 충전</td><td>누설 점검 포함</td><td>00,000원~</td></tr>
+            <tr><td>분해 청소</td><td>벽걸이 / 스탠드 / 시스템</td><td>00,000원~</td></tr>
+            <tr><td>설치·이전</td><td>배관 길이와 환경에 따라 달라짐</td><td>00,000원~</td></tr>
+            <tr><td>부품 교체</td><td>기판, 모터, 콘덴서 등</td><td>부품에 따라 안내</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">※ 위 금액은 입력 예시입니다. 실제 요금으로 바꿔서 사용하세요.</p>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <h2>진행 순서</h2>
+      <p class="sub">수리비가 정해지기 전에는 작업하지 않습니다.</p>
+      <ol class="steps">
+        <li><b>전화 또는 문자</b><span>증상, 모델명, 주소를 알려주세요.</span></li>
+        <li><b>방문 점검</b><span>예약한 시간에 방문해 원인을 확인합니다.</span></li>
+        <li><b>견적 안내</b><span>수리 내용과 금액을 설명드립니다.</span></li>
+        <li><b>수리 진행</b><span>동의하시면 바로 작업합니다.</span></li>
+        <li><b>작동 확인과 A/S</b><span>같이 확인하고, 보증 기간을 안내드립니다.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <h2>자주 묻는 질문</h2>
+      <p class="sub">&nbsp;</p>
+      <details><summary>모든 브랜드 수리가 가능한가요?</summary><p>삼성, LG, 캐리어, 위니아 등 대부분 가능합니다. 단종된 모델은 부품 수급에 따라 달라질 수 있어 전화로 모델명을 알려주세요.</p></details>
+      <details><summary>수리 후 A/S는 어떻게 되나요?</summary><p>작업 후 (00)개월 동안 같은 증상이 재발하면 무상 점검합니다. (실제 보증 조건으로 수정하세요.)</p></details>
+      <details><summary>출장비는 따로 받나요?</summary><p>점검 후 수리를 진행하시면 출장비를 (포함 / 별도)로 안내드립니다. (실제 정책으로 수정하세요.)</p></details>
+      <details><summary>가스만 채우면 되나요?</summary><p>가스는 새지 않는 한 줄어들지 않습니다. 먼저 누설 여부를 확인하고, 원인을 해결한 뒤에 충전하는 것이 맞습니다.</p></details>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>예약 · 문의</h2>
+      <p>전화가 가장 빠릅니다. 문자로 증상과 사진을 보내주셔도 됩니다.</p>
+      <dl>
+        <dt>전화</dt><dd><a href="tel:01000000000">010-0000-0000</a></dd>
+        <dt>영업시간</dt><dd>09:00–20:00 (연중무휴)</dd>
+        <dt>서비스 지역</dt><dd>(지역명을 입력하세요)</dd>
+        <dt>상호 / 대표</dt><dd>OO에어컨 / 홍길동</dd>
+        <dt>사업자번호</dt><dd>000-00-00000</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>© OO에어컨. All rights reserved.</footer>
+
+<div class="bar"><a href="tel:01000000000">전화하기 010-0000-0000</a></div>
+
+</body>
+</html>
